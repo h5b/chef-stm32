@@ -1,4 +1,9 @@
-chef-stm32
-==========
+# Description
+Installs GCC ARM Embedded Toolchain to support the development of C programs
+aimed at STM32 Microcontrollers.
 
-Chef cookbook for stm32 GCC ARM Embedded Toolchain
+# Requirements
+
+# Attributes
+
+# Usage
