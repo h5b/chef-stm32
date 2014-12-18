@@ -1,6 +1,15 @@
 cache_path = Chef::Config[:file_cache_path]
 configure_flags = node[:openocd][:configure_flags].join(" ")
 
+apt_repository "gcc-arm-embedded" do
+  uri "http://ppa.launchpad.net/terry.guo/gcc-arm-embedded/ubuntu/"
+  distribution node['lsb']['codename']
+  components ["main"]
+  keyserver "keyserver.ubuntu.com"
+  key "6D1D8367A3421AFB"
+  action :add
+end
+
 node['stm32']['packages'].each do |p|
   package p
 end
